@@ -312,50 +312,49 @@
 // console.log(heap.getList());
 
 
-// class TrieNode{
-//     constructor(key){
-//         this.key=key
-//         this.parent=null
-//         this.children={}
-//         this.end=false
+{class TrieNode{
+    constructor(key){
+        this.key=key
+        this.parent=null
+        this.children={}
+        this.end=false
 
-//     }
+    }
 
-// }
+}
 
 
-// class Trie{
-//     constructor(){
-//         this.root=new TrieNode(null)
-//     }
+class Trie{
+    constructor(){
+        this.root=new TrieNode(null)
+    }
 
-//     insert=(word)=>{
-//         let node=this.root
+    insert=(word)=>{
+        let node=this.root
 
-//         for(let i=0;i<word.length;i++){
-//             if(!node.children[word[i]]){
-//                 node.children[word[i]]=new TrieNode[word[i]]
-//                 node.children[word[i]].parent=node
-//             }
-//             node=node.children[word[i]]
+        for(let i=0;i<word.length;i++){
+            if(!node.children[word[i]]){
+                node.children[word[i]]=new TrieNode[word[i]]
+                node.children[word[i]].parent=node
+            }
+            node=node.children[word[i]]
 
-//             if(i==word.length-1){
-//                 this.end=true
-//             }
-//         }
-//     }
+            if(i==word.length-1){
+                this.end=true
+            }
+        }
+    }
 
-//     contains=(word)=>{
-//         let node=this.root
-//         for(i=0;i<word.length;i++){
-//             if(node.children[word[i]]){
-//                 node=node.children[word[i]]
-//             }else{
-//                 return false
-//             }
-//         }
-//         return node.end
-//     }
-// }
+    contains=(word)=>{
+        let node=this.root
+        for(i=0;i<word.length;i++){
+            if(node.children[word[i]]){
+                node=node.children[word[i]]
+            }else{
+                return false
+            }
+        }
+        return node.end
+    }
+}}
 
-class 
