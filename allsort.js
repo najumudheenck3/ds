@@ -17,6 +17,24 @@
 }
 
 {
+    console.log('bubble sort');
+    function bubbleSort(arr) {
+        for (i = 0; i < arr.length; i++) {
+            for (j = 0; j < arr.length - 1 - i; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    let temp = arr[j]
+                    arr[j] = arr[j + 1]
+                    arr[j + 1] = temp
+                }
+            }
+        }
+    }
+    const arr = [8, 20, -2, 4, -6]
+    bubbleSort(arr)
+    console.log(arr);
+}
+
+{
     console.log('insertionn sort');
     function insertionSort(arr) {
         for (i = 1; i < arr.length; i++) {
